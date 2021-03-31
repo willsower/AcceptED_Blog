@@ -1,5 +1,7 @@
 # AcceptED_Blog
 
+Created using Next.JS
+
 To Start Dev Server
 `npm run dev`
 
