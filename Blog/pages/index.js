@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 
+// Gets data for posts
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
@@ -14,6 +15,7 @@ export async function getStaticProps() {
   }
 }
 
+// Rendurs home page
 export default function Home({ allPostsData }) {
   return (
     <Layout home>

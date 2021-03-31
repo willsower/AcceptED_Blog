@@ -36,22 +36,10 @@ export function getSortedPostsData() {
   })
 }
 
+// Creates JSON like structure which has a parameter with the id being the name of the file
 export function getAllPostIds() {
     const fileNames = fs.readdirSync(postsDirectory)
-  
-    // Returns an array that looks like this:
-    // [
-    //   {
-    //     params: {
-    //       id: 'ssg-ssr'
-    //     }
-    //   },
-    //   {
-    //     params: {
-    //       id: 'pre-rendering'
-    //     }
-    //   }
-    // ]
+
     return fileNames.map(fileName => {
       return {
         params: {
