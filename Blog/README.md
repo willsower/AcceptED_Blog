@@ -1,5 +1,3 @@
-# AcceptED_Blog
-
 To Start Dev Server
 `npm run dev`
 
