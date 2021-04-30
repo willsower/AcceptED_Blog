@@ -4,7 +4,7 @@ date: '2021-04-29'
 ---
 
 ## Database Research
-Before we design and impliment the database, we must determine what data is necessary. This is not yet finalized, but the design team has given us an idea of what we will need. I will be using the term entity to refer to a table in the relational database, and the term attribute to refer to the columns in that table. Values will refer to the actual data in the attributes.
+Before we design and implement the database, we must determine what data is necessary. This is not yet finalized, but the design team has given us an idea of what we will need. I will be using the term entity to refer to a table in the relational database, and the term attribute to refer to the columns in that table. Values will refer to the actual data in the attributes.
 
 All users have the following attributes:
 * ID (primary key)
@@ -60,10 +60,10 @@ Material attributes: (These may change depending on the degree of Google Drive i
 * Link
 * Pinned (y, n)
 * Folder (in main folder if Null)
-* Type (Resources, Cirriculum)
+* Type (Resources, Curriculum)
 
 
-I will complete these attribute lists and tackle organizing the cirriculum structure in another blog.
+I will complete these attribute lists and tackle organizing the curriculum structure in another blog.
 
 I also need to communicate with the design team about how Modules should work. Is a Module a set of Tasks, or is there more to it?
 
