@@ -13,4 +13,6 @@ All users have the following attributes:
     Password
     Profile Photo
 
-From there, users diverge into two types: students and consultants. There are multiple ways to impliment this subclass structure in a relational database, but that is a problem for future me. See ![this stackoverflow post](https://stackoverflow.com/questions/13749525/relational-database-design-multiple-user-types) For now, I need to list the data needed for each type, and consolidate any shared attributes into the main user entity.
+From there, users diverge into two types: students and consultants. There are multiple ways to impliment this subclass structure in a relational database, but that is a problem for future me. See [this stackoverflow post](https://stackoverflow.com/questions/13749525/relational-database-design-multiple-user-types) For now, I need to list the data needed for each type, and consolidate any shared attributes into the main user entity.
+
+**-Walker**
