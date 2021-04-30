@@ -8,7 +8,8 @@ Before we design and impliment the database, we must determine what data is nece
 
 All users have the following attributes:
 * ID (primary key)
-* Name (first + last)
+* First Name
+* Last Name
 * Email
 * University Code
 * Password
@@ -34,7 +35,7 @@ Student attributes:
 * Preferred Language
 
 StudentUniversityOption attributes:
-* ID
+* IDs
 * University ID
 * Likelihood (Likely, Possible, Reach)
 * Status (Waiting, Accepted, Rejected)
@@ -57,6 +58,10 @@ Material attributes: (These may change depending on the degree of Google Drive i
 * Name
 * Description
 * Link
+* Pinned (y, n)
+* Folder (in main folder if Null)
+* Type (Resources, Cirriculum)
+
 
 I will complete these attribute lists and tackle organizing the cirriculum structure in another blog.
 
