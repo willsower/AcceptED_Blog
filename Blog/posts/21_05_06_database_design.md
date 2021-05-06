@@ -1,6 +1,6 @@
 ---
-title: 'Using Prisma'
-date: '2021-05-06'
+title: 'Preliminary Database Design'
+date: '2021-04-29'
 ---
 
 ## Database Research

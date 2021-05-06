@@ -1,5 +1,5 @@
 ---
-title: 'Preliminary Database Design'
+title: 'Using Prisma'
 date: '2021-05-06'
 ---
 
