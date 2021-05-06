@@ -3,68 +3,17 @@ title: 'Preliminary Database Design'
 date: '2021-05-06'
 ---
 
-## Database Research
-Before we design and implement the database, we must determine what data is necessary. This is not yet finalized, but the design team has given us an idea of what we will need. I will be using the term entity to refer to a table in the relational database, and the term attribute to refer to the columns in that table. Values will refer to the actual data in the attributes.
+## What is Prisma?
+Prisma is an Object-Relational Mapping tool. It allows us to modify a database using object-oriented style scripts rather than SQL, and prevents SQL injection. It also has a GUI where we can view and modify values in the database.
 
-All users have the following attributes:
-* ID (primary key)
-* First Name
-* Last Name
-* Email
-* University Code
-* Password
-* Profile Photo
-* Join Date (date their account was created)
-* Type (Consultant or Student) - might not be needed, depending on the approach to relational "subclasses"
+## How does it work?
+See [this tutorial](https://vercel.com/guides/nextjs-prisma-postgres) for detailed setup information.  
+To create the database schema, we use the schema.prisma file. In this file we define the following:
+* datasource: this has provider, which we will set to "posgresql", and url, which will be the url of our database
+* generator: has provider, set to "prisma-client-js" because we are using next.js
+* models: these are the tables in the database. Each line within a model has the name of the attribute, the type (with a question mark if it can be null), and other parameters, such as "@relation", which defines a relation to another table.
 
-From there, users diverge into two types: students and consultants. There are multiple ways to impliment this subclass structure in a relational database \(see [this stackoverflow post](https://stackoverflow.com/questions/13749525/relational-database-design-multiple-user-types)\), but that is a problem for future me. For now, I need to list the attributes needed for each user type, and consolidate any shared attributes into the main user entity.
-
-PostgreSQL supports arrays, so we can store multiple values in a single attribute.
-
-Consultant attributes:
-* University ID
-* ID Photo (not to be confused with user's primary key ID)
-* Tasks - array of Task IDs
-* Students - array of User IDs
-* Materials - array of Material IDs (this may need to be consolidated with Tasks)
-
-Student attributes:
-* High School
-* Email opt-in
-* Universities - array of StudentUniversityOption IDs
-* Preferred Language
-
-StudentUniversityOption attributes:
-* IDs
-* University ID
-* Likelihood (Likely, Possible, Reach)
-* Status (Waiting, Accepted, Rejected)
-
-University attributes:
-* ID
-* Name
-* Placeholder (if no other attributes are needed, we don't need University to be its own attribute)
-
-Task attributes:
-* ID
-* Name
-* Assigned Date
-* Due Date
-* Status (Not Started, In Progress, Complete)
-* Files - Array of Material IDs (Unsure about this)
-
-Material attributes: (These may change depending on the degree of Google Drive integration)
-* ID
-* Name
-* Description
-* Link
-* Pinned (y, n)
-* Folder (in main folder if Null)
-* Type (Resources, Curriculum)
-
-
-I will complete these attribute lists and tackle organizing the curriculum structure in another blog.
-
-I also need to communicate with the design team about how Modules should work. Is a Module a set of Tasks, or is there more to it?
-
+When that is set up, we must set up a prisma client. The client is a query builder that prevents SQL injection and organizes our queries.  
+[Here is the prisma API reference](https://www.prisma.io/docs/concepts/components/prisma-client). I will use this often when building queries.
+As we build the project, I will become more familiar with the structure and syntax of Prisma queries. These Prisma queries are wrapped in javascript functions, which can then be called by the frontend team to get the data they want to display.
 **-Walker**
