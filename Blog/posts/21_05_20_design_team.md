@@ -93,4 +93,4 @@ Profile Page Questions (EC) -> https://retool.com/
 
 Speaking with the design team, it was noted that we won't be able to contact them afterwords since they are graduating. We also learned that we have to build an admin portal, but we will also need to design it ourselves since the Design team was contracted to only build the first two.
 
-From this meeting, it was noted that we would have to meet with AcceptED's leadership team to fill the gaps, since a lot of the questions and answers seemed unsure.
+From this meeting, it was noted that we would have to meet with AcceptED's leadership team to fill the gaps, since a lot of the questions and answers seemed unsure. We also decided to integrate with Google from meeting with the design team.
